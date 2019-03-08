@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.cqupt.lq.zy.pri.mapper.EditorMapper">
+       <select id="selectEditor" parameterType="cn.cqupt.lq.zy.pri.vo.Editor" resultType="cn.cqupt.lq.zy.pri.vo.Editor">
+       SELECT editorid,editorname,editorpassword FROM editor WHERE editorname=#{Editor.editorname} and editorpassword=#{Editor.editorpassword}
+       </select>
+
+
+
+
+</mapper>

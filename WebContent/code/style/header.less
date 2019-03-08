@@ -1,0 +1,110 @@
+@backColor: #f5f7f7;
+@contentWidth: 1024px;
+@hoverColor: #1db4ac;
+@detailBackColor: #fff;
+@detailHeadFontColor: #f97223;
+.size(@width, @height) {
+    width: @width;
+    height: @height;
+}
+.boxShadow() {
+    box-shadow: 5px 5px 10px rgba(207, 206, 206, 0.3);
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+#container {
+    .size(100%, auto);
+    background: @backColor;
+}
+// 头部导航栏
+@headeeHeight: 70px;
+#head {
+    .size(100%, @headeeHeight);
+    background: #fff;
+    .boxShadow();
+    position: fixed;
+    z-index: 999;
+}
+@logoHeight: 44px;
+@liFontSize: 18px;
+@liHoverDis: 4px;
+@liMarginLeft: 20px;
+@navColor: #0B3E0D;
+@hoverWidth: 4px;
+@headerHoverColor: #4ef5d6;
+#header {
+    .size(@contentWidth, 100%);
+    margin: 0 auto;
+    #logo {
+        .size(198px, @logoHeight);
+        margin-top: (@headeeHeight - @logoHeight) / 2;
+        float: left;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    nav {
+        .size(@liFontSize * 26 + @liMarginLeft * 7, 100%);
+        float: right;
+        li {
+            font-size: @liFontSize;
+            height: @liFontSize + @liHoverDis * 2;
+            line-height: @liFontSize + @liHoverDis * 2;
+            margin-top: (@headeeHeight - @liFontSize - @liHoverDis * 2) / 2;
+            float: left;
+            margin-left: @liMarginLeft;
+            a {
+                color: @navColor;
+            }
+        }
+        li:hover {
+            border-bottom: @hoverWidth solid @headerHoverColor;
+        }
+    }
+}
+// 底部
+@footerBackColor: #383a39;
+@footerFontColor: #acacac;
+@footerLinkFontSize: 16px;
+@footerFontSize: 14px;
+@footerLinkDis: 55px;
+@footerLineHeight: 35px;
+footer {
+    .size(100%, 180px);
+    background: @footerBackColor;
+    margin-top: 50px;
+}
+#foot {
+    .size(100%, 80px);
+    margin: 0 auto;
+    padding-top: 35px;
+    color: @footerFontColor;
+    font-size: @footerFontSize;
+    line-height: @footerLineHeight;
+    text-align: center;
+    #footLink {
+        .size(@footerLinkFontSize * 16 + @footerLinkDis * 3, @footerLineHeight);
+        margin: 0 auto;
+        a {
+            font-size: @footerLinkFontSize;
+            float: left;
+            padding-left: @footerLinkDis;
+            color: @footerFontColor;
+        }
+        a:nth-child(1) {
+            padding-left: 0;
+        }
+        a:hover {
+            color: #fff;
+        }
+    }
+    p {
+        .size(auto, @footerLineHeight);
+        margin: 0 auto;
+    }
+}

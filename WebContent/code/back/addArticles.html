@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>发布文章-张家口旅游政务网管理系统</title>
+    <link href="../style/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../style/backCommon.css">
+    <link rel="stylesheet" href="../style/addArticles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="slide">
+            <div id="dark">
+            </div>
+            <div id="portrait">
+                <img src="../images/logo.jpg" alt="头像">
+            </div>
+            <p>管理员</p>
+            <ul>
+                <li style="background-color: #1DB4AC;">
+                    <a href="./addArticles.html">
+                        <i class="iconfont">&#xe67d;</i>
+                        <p>发布文章</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./articlesManage.html">
+                        <i class="iconfont">&#xe65d;</i>
+                        <p>文章管理</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./linkManage.html">
+                        <i class="iconfont">&#xe68e;</i>
+                        <p>接口管理</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./diary.html">
+                        <i class="iconfont">&#xe69d;</i>
+                        <p>日志系统</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./login.html">
+                        <i class="iconfont">&#xe67f;</i>
+                        <p>退出登录</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="blank"></div>
+        <div id="main">
+            <header id="header">
+                <h2>张家口旅游政务网管理系统</h2>
+            </header><!-- /header -->
+            <div id="more">
+                <h1>发布文章</h1>
+                <form action="addArticles_submit" method="get" accept-charset="utf-8">
+                    <input id="inputHead" type="text" name="articleHeader" value="" placeholder="输入文章标题">
+                    <!-- <textarea type="text" name="articleContent" value="" placeholder="输入文章内容"></textarea> -->
+                    <div id="editor">
+                    </div>
+                    <div id="uploadPic">
+                        <label for="articlePic">封面图片：</label>
+                        <input id="uploadFile" type="file" name="articlePic" value="" placeholder="">
+                    </div>
+                    <div id="sortDiv">
+                        <label>选择类别：</label>
+                        <div id="sort">
+                            <input type="radio" name="category" value="旅游要闻" placeholder="">旅游要闻
+                            <input type="radio" name="category" value="通知公告" placeholder="">通知公告
+                            <input type="radio" name="category" value="市外动态" placeholder="">市外动态
+                            <input type="radio" name="category" value="领导讲话" placeholder="">领导讲话
+                            <input type="radio" name="category" value="机关党建" placeholder="">机关党建
+                            <input type="radio" name="category" value="十九大专题" placeholder="">十九大专题
+                            <input type="radio" name="category" value="旅游法" placeholder="">旅游法
+                            <input type="radio" name="category" value="国务院法规及规范性文件" placeholder="">国务院法规及规范性文件
+                            <input type="radio" name="category" value="国家旅游局规章及规范性文件" placeholder="">国家旅游局规章及规范性文件
+                            <input type="radio" name="category" value="河北旅游法规" placeholder="">河北旅游法规
+                            <input type="radio" name="category" value="相关法规" placeholder="">相关法规
+                            <input type="radio" name="category" value="综合信息" placeholder="">综合信息
+                            <input type="radio" name="category" value="交通信息" placeholder="">交通信息
+                            <input type="radio" name="category" value="景区信息" placeholder="">景区信息
+                            <input type="radio" name="category" value="旅行社" placeholder="">旅行社
+                            <input type="radio" name="category" value="餐饮信息" placeholder="">餐饮信息
+                            <input type="radio" name="category" value="酒店住宿" placeholder="">酒店住宿
+                            <input type="radio" name="category" value="旅游商品" placeholder="">旅游商品
+                            <input type="radio" name="category" value="旅行路线" placeholder="">旅行路线
+                        </div>
+                    </div>
+                    <div id="setPriority">
+                        <label for="priority">设置优先级：</label>
+                        <input id="priority" type="text" name="priority" value="" placeholder="请填入数字，数字越小，优先级越高">
+                    </div>
+                    <div id="buttons">
+                        <button type="submit">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../script/wangEditor.min.js"></script>
+    <script type="text/javascript" src="../script/addArticles.js"></script>
+</body>
+</html>

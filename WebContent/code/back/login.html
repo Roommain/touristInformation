@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>后台管理-登录</title>
+    <link rel="icon" href="../images/logo.ico">
+    <link rel="stylesheet" href="../style/login.css">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="main">
+            <div id="logo">
+                <img src="../images/logo2.png" alt="logo">
+            </div>
+            <h1>张家口旅游政务网管理平台</h1>
+            <h2>Zhangjiakou Tourism Administration Network Management Platform</h2>
+            <div id="login">
+                <form action="" method="post" accept-charset="utf-8">
+                    <div class="infoInput">
+                        <div class="hintIcon">
+                            <i class="iconfont">&#xe66c;</i>
+                        </div>
+                        <input id="userName" type="text" name="userName" value="" placeholder="输入你的账号">
+                    </div>
+                    <div class="infoInput">
+                        <div class="hintIcon">
+                            <i class="iconfont">&#xe653;</i>
+                        </div>
+                        <input id="psd" type="password" name="psd" value="" placeholder="输入你的密码">
+                    </div>
+                    <div id="sort">
+                        <input type="radio" name="category" value="admin" placeholder="">管理员登录
+                        <input type="radio" name="category" value="editor" placeholder="">编辑员登录
+                    </div>
+                    <input type="submit" name="" value="登录">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../script/login.js"></script>
+</html>

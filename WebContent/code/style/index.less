@@ -1,0 +1,539 @@
+@backColor: #f5f7f7;
+@contentWidth: 1024px;
+@hoverColor: #1db4ac;
+@detailBackColor: #fff;
+@detailHeadFontColor: #f97223;
+.size(@width, @height) {
+    width: @width;
+    height: @height;
+}
+.boxShadow() {
+    box-shadow: 5px 5px 10px rgba(207, 206, 206, 0.3);
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../icon/iconfont.eot');
+    src: url('../icon/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../icon/iconfont.woff') format('woff'),
+    url('../icon/iconfont.ttf') format('truetype'),
+    url('../icon/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+#container {
+    .size(100%, auto);
+    background: @backColor;
+}
+// 头部导航栏
+@headeeHeight: 70px;
+@logoHeight: 44px;
+@liFontSize: 18px;
+@liHoverDis: 4px;
+@liMarginLeft: 20px;
+@navColor: #0B3E0D;
+@hoverWidth: 4px;
+@headerHoverColor: #4ef5d6;
+// 轮播
+#wrap {
+    .size (100%, 500px);
+    padding-top: @headeeHeight;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+#ppt {
+    position: absolute;
+    transition: all .5s ease-in 0s;
+    div {
+        .size (100%, 500px);
+        float: left;
+        text-align: center;
+        img {
+            .size (100%, 500px);
+        }
+    }
+}
+@controlBtnWidth: 40px;
+@controlBtnHeight: 5px;
+@controlBtnDis: 15px;
+@controlBtnMargin: 20px;
+@controlBtnColor: #fff;
+#banner {
+    .size (@controlBtnWidth * 3 + @controlBtnDis * 2,  @controlBtnHeight);
+    margin: 0 auto;
+    margin-top: -@controlBtnMargin;
+    opacity: .8;
+}
+#button {
+    .size (@controlBtnWidth * 3 + @controlBtnDis * 2,  @controlBtnHeight);
+    div {
+        .size (@controlBtnWidth, @controlBtnHeight);
+        float: left;
+        margin-left: @controlBtnDis;
+        img {
+            .size(100%, 100%);
+        }
+    }
+    div:nth-child(1) {
+        margin-left: 0;
+    }
+    .btn {
+        background-color: gray;
+        opacity: .5;
+    }
+    .current {
+        background-color: @controlBtnColor;
+    }
+}
+// 快速导航以及搜索框
+@quickNavHeight: 80px;
+@quickNavMargin: 40px;
+@quickNavFontSize: 16px;
+@quickNavLineHeight: 44px;
+@quickNavColor: #545454;
+@quickNavLiDis: 25px;
+@searchIconSize: 35px;
+@searchPadding: 5px;
+#quickNavAndSearch {
+    .size(@contentWidth, @quickNavHeight);
+    margin: 0 auto;
+    margin-top: @quickNavMargin + @controlBtnMargin;
+    #quickNav {
+        .size(@contentWidth * 0.7, @quickNavHeight);
+        float: left;
+        color: @quickNavColor;
+        line-height: @quickNavLineHeight;
+        #quickNavHint {
+            .size(@quickNavFontSize * 5 + 5px, inherit);
+            float: left;
+        }
+        nav {
+            .size(@contentWidth * 0.65 - @quickNavFontSize * 5 - 5px, 100%);
+            li {
+                .size(auto, @quickNavLineHeight);
+                float: left;
+                margin-right: @quickNavLiDis;
+                a {
+                    color: @quickNavColor;
+                }
+                a:hover {
+                    color: @headerHoverColor;
+                }
+            }
+        }
+    }
+    #search {
+        margin-top: 10px;
+        .size(@contentWidth * 0.3, @quickNavHeight);
+        float: right;
+        button {
+            .size(@searchIconSize, @searchIconSize);
+            border: 0;
+            background: transparent;
+            float: right;
+            img {
+                .size(100%, 100%);
+            }
+        }
+        input {
+            .size(@contentWidth * 0.3 - @searchIconSize - 12px - @searchPadding * 2, @searchIconSize - 2px - @searchPadding * 2);
+            border: 1px solid @headerHoverColor;
+            margin-right: 10px;
+            padding: @searchPadding;
+            float: right;
+        }
+    }
+}
+// 小栏目标题
+@detailHeaderHeight: 50px;
+@highlightColor: #1db4ac;
+@detailHeaderFontSize: 18px;
+@moreColor: #848585;
+.detailHeader {
+    .size(@contentWidth, @detailHeaderHeight);
+    margin: 0 auto;
+    clear: both;
+    line-height: @detailHeaderHeight;
+    h3 {
+        font-size: @detailHeaderFontSize;
+        float: left;
+        a {
+            font-size: @detailHeaderFontSize;
+            color: @highlightColor;
+            cursor: text;
+            float: left;
+            text-decoration: none;
+        }
+        // a:target {
+        //     padding-top: 100px;
+        // }
+    }
+    a {
+        .size(auto, @detailHeaderHeight);
+        color: @moreColor;
+        font-size: 14px;
+        float: right;
+        text-decoration: underline;
+    }
+    a:hover {
+        color: @highlightColor;
+    }
+}
+@detailHeadFontSize: 20px;
+@detailInfoFontSize: 14px;
+@detailInfoFontColor: #545454;
+@detailMoreHeadFontSize: 16px;
+@detailMoreHeadFontColor: #000;
+.abstract {
+    .size(@contentWidth * 0.7 - 20px, 180px);
+    .boxShadow();
+    float: left;
+    background: @detailBackColor;
+    padding: 10px;
+    .pic {
+        .size(180px, 180px);
+        float: left;
+        img {
+            .size(100%, 100%);
+        }
+    }
+    .abstractInfo {
+        .size(@contentWidth * 0.7 - 20px - 180px - 10px, 180px);
+        float: right;
+        h4 {
+            .size(100%, @detailHeadFontSize + 5px);
+            font-size: @detailHeadFontSize;
+            color: @detailHeadFontColor;
+            font-weight: 300;
+            overflow: hidden;
+        }
+        p {
+            .size(@contentWidth * 0.7 - 20px - 180px - 10px, 120px);
+            margin-top: 10px;
+            font-size: @detailInfoFontSize;
+            color: @detailInfoFontColor;
+        }
+        .date {
+            .size(@contentWidth * 0.7 - 20px - 180px - 10px, 20px);
+            text-align: right;
+            color: @moreColor;
+        }
+    }
+}
+// 旅游要闻
+#travelNews {
+    .size(@contentWidth, 200px);
+    margin: 0 auto;
+}
+.moreHeader {
+    .size(@contentWidth * 0.3 - 40px, 180px);
+    padding: 10px;
+    background: @detailBackColor;
+    .boxShadow();
+    float: right;
+    ul {
+        li {
+            list-style: disc inside;
+            .size(@contentWidth * 0.3 - 40px, @detailMoreHeadFontSize + 10px);
+            overflow: hidden;
+            a {
+                font-size: @detailMoreHeadFontSize;
+                line-height: @detailMoreHeadFontSize + 10px;
+                color: @detailMoreHeadFontColor;
+            }
+            a:hover {
+                color: @detailHeadFontColor;
+            }
+        }
+    }
+}
+// 旅游资讯
+@travelInfoMargin: 30px;
+@travelInfoHeadFontSize: 18px;
+#travelInfo {
+    .size(@contentWidth, 200px);
+    margin: 0 auto;
+    .travelInfoDiv {
+        .size((@contentWidth - @travelInfoMargin * 2) / 3 - 20px, 180px);
+        background: @detailBackColor;
+        padding: 10px;
+        .boxShadow();
+        float: left;
+        margin-left: @travelInfoMargin;
+        h4 {
+            .size(100%, @travelInfoHeadFontSize + 5px);
+            font-size: @travelInfoHeadFontSize;
+            color: @detailHeadFontColor;
+            font-weight: 300;
+            overflow: hidden;
+            text-decoration: underline;
+        }
+        p {
+            .size((@contentWidth - @travelInfoMargin * 2) / 3 - 20px, 180px);
+            text-align: center;
+            margin-top: 10px;
+            font-size: @detailInfoFontSize;
+            color: @detailInfoFontColor;
+        }
+    }
+    a:nth-child(1) .travelInfoDiv {
+        margin-left: 0;
+    }
+}
+// 机关党建
+#party {
+    .size(@contentWidth, 200px);
+    margin: 0 auto;
+}
+#council {
+    .size(200px, 100px);
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    .councilBtn {
+        .size(80px, 100px);
+        float: left;
+        margin-left: 40px;
+        #councilNews {
+            .size(70px, 70px);
+            border-radius: 50% 50%;
+            background: #20b0e4;
+        }
+        #councilFiles {
+            .size(70px, 70px);
+            border-radius: 50% 50%;
+            background: #f97223;
+        }
+        i {
+            font-size: 35px;
+            color: #fff;
+            line-height: 70px;
+        }
+    }
+    a:nth-child(1) .councilBtn{
+        margin-left: 0;
+    }
+    p {
+        font-size: 16px;
+        color: #000;
+        margin-top: 10px;
+    }
+}
+// 玩遍张家口
+#tour {
+    .size(@contentWidth, 405px);
+    margin: 0 auto;
+    background: @detailBackColor;
+    .tourPic {
+        .size((@contentWidth - 10px) / 3, 200px);
+        float: left;
+        margin-left: 5px;
+        position: relative;
+        .tourPicture {
+            .size(100%, 100%);
+            img {
+                .size(100%, 100%);
+            }
+        }
+        .tourInfo {
+            .size(100%, 40px);
+            background: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            bottom: 0;
+            p {
+                font-size: 16px;
+                padding: 0 10px;
+                line-height: 40px;
+                color: #565555;
+            }
+        }
+    }
+    a:nth-child(3n+1) .tourPic {
+        margin-left: 0;
+    }
+    a:nth-child(n+4) .tourPic{
+        margin-top: 5px;
+    }
+}
+// 网上办公
+#onlineWork {
+    .size(@contentWidth, 150px);
+    .boxShadow();
+    background: @detailBackColor;
+    margin: 0 auto;
+    nav {
+        padding: 15px 25px;
+        .size(@contentWidth - 50px, 120px);
+        li {
+            .size((@contentWidth - 50px) / 4, 40px);
+            float: left;
+            a {
+                font-size: 18px;
+                line-height: 33px;
+                color: #000;
+            }
+            a:hover {
+                color: @detailHeadFontColor;
+            }
+        }
+    }
+}
+// 便民服务
+@seviceMargin: 75px;
+#service {
+     .size(@contentWidth - 40px, 130px);
+    .boxShadow();
+    background: @detailBackColor;
+    margin: 0 auto;
+    padding: 20px;
+    .serviceBtn {
+        .size((@contentWidth - @seviceMargin * 7) / 6, 130px);
+        text-align: center;
+        float: left;
+        margin-left: @seviceMargin;
+        div {
+            .size((@contentWidth - @seviceMargin * 7) / 6, (@contentWidth - @seviceMargin * 7) / 6);
+            border-radius: 50% 50%;
+            i {
+                font-size: 45px;
+                color: #fff;
+                line-height: (@contentWidth - @seviceMargin * 7) / 6;
+            }
+        }
+        p {
+            padding-top: 20px;
+            color: #000;
+            vertical-align: bottom;
+        }
+    }
+    a:nth-child(1) {
+        .serviceIconDiv {
+            background: #f83c24;
+        }
+    }
+    a:nth-child(2) {
+        .serviceIconDiv {
+            background: #1a98e9;
+        }
+    }
+    a:nth-child(3) {
+        .serviceIconDiv {
+            background: #36a76b;
+        }
+    }
+    a:nth-child(4) {
+        .serviceIconDiv {
+            background: #f99b25;
+        }
+    }
+    a:nth-child(5) {
+        .serviceIconDiv {
+            background: #f97223;
+        }
+    }
+    a:nth-child(6) {
+        .serviceIconDiv {
+            background: #1fccdd;
+        }
+    }
+}
+// 彩带
+@ribbonShadowColor: #af5b18;
+@ribbonFontColor: #fff;
+.ribbon(@ribbonColor, @ribbonShadowColor, @ribbonFontColor) {
+    .ribbon {
+        .size(20px, 60px);
+        padding: 5px;
+        position: absolute;
+        left: 15px;
+        top: -5px;
+        margin-right: 30px;
+        border-radius: 5px 0 0 0;
+        background: @ribbonColor;
+        color: @ribbonFontColor;
+        font-size: 14px;
+        writing-mode: vertical-lr;/*从左向右 从右向左是 writing-mode: vertical-rl;*/    
+        writing-mode: tb-lr;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/
+    }
+    .ribbon:before {
+        .size(0, 0);
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -5px;
+        border-left: 2.5px solid @ribbonShadowColor;
+        border-bottom: 2.5px solid @ribbonShadowColor;
+        border-right: 2.5px solid transparent;
+        border-top: 2.5px solid transparent;
+    }
+    .ribbon:after {
+        content: "";
+        .size(0, 0);
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        border-left: 15px solid @ribbonColor;
+        border-right: 15px solid @ribbonColor;
+        border-bottom: 15px solid transparent;
+    }
+}
+// 办事指南
+@guidanceMargin: 40px;
+@guidanceItemWidth: ((@contentWidth - 20px - 2 * 70px - 2 * 30px - @guidanceMargin * 4) / 6);
+@guidanceItemColor: #dcdcdc;
+@guidanceIconColor: #696969;
+#guidance {
+    .size(@contentWidth, 170px);
+    margin: 0 auto;
+}
+#guidanceLeft {
+    .size(@guidanceItemWidth * 4 + @guidanceMargin * 3 + 30px + 70px, 170px);
+    .boxShadow();
+    background: @detailBackColor;
+    float: left;
+    position: relative;
+    @ribbonColor: #ff7a36;
+    .ribbon(@ribbonColor, @ribbonShadowColor, @ribbonFontColor);
+}
+#guidanceRight {
+    .size(@guidanceItemWidth * 2 + @guidanceMargin * 1 + 30px + 70px, 170px);
+    .boxShadow();
+    background: @detailBackColor;
+    float: right;
+    position: relative;
+    @ribbonColor: #f83c24;
+    .ribbon(@ribbonColor, @ribbonShadowColor, @ribbonFontColor);
+}
+.guidanceBtn {
+    .size(@guidanceItemWidth - 2px - 20px, 104px);
+    margin-top: 23px;
+    padding: 10px;
+    float: left;
+    margin-left: @guidanceMargin;
+    border: 1px solid @guidanceItemColor;
+    color: @guidanceIconColor;
+    text-align: center;
+    i {
+        font-size: 40px;
+        line-height: 60px;
+    }
+    p {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+a:nth-child(2) .guidanceBtn{
+    margin-left: 70px;
+}

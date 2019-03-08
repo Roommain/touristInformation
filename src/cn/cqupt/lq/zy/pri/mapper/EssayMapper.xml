@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.cqupt.lq.zy.pri.mapper.EssayMapper">
+         <select id="searchEssay" parameterType="String" resultType="cn.cqupt.lq.zy.pri.vo.Essay">
+         SELECT * FROM essay WHERE esdiffernt=#{esdiffernt} and estitle LIKE CONCAT(CONCAT('%',#{estitle},'%'))  ORDER BY eslevel DESC,esdate DESC
+         </select>
+
+         <select id="showEssay" resultType="cn.cqupt.lq.zy.pri.vo.Essay">
+          SELECT*FROM essay WHERE esdiffernt=#{esdiffernt}
+         </select>
+         
+         <select id="showEssayAll" resultType="cn.cqupt.lq.zy.pri.vo.Essay">
+          SELECT*FROM essay
+         </select>
+
+         <insert id="addEssay"  parameterType="cn.cqupt.lq.zy.pri.vo.Essay">
+         INSERT INTO essay (estitle,esmessage,esdate,espicture,esdiffernt,eslevel,esfacepicture)VALUES
+         (#{Essay.estitle},#{Essay.esmessage},#{Essay.esdate},#{Essay.espicture},
+         #{Essay.esdiffernt},#{Essay.eslevel},#{Essay.esfacepicture})
+         </insert>
+         
+         <delete id="delEssay" parameterType="int">
+         DELETE FROM essay WHERE esid=#{esid}
+         </delete>
+         
+         <update id="updaEssay" parameterType="cn.cqupt.lq.zy.pri.vo.Essay">
+         UPDATE essay SET esid=#{esid},estitle=#{Essay.estitle},esmessage=#{Essay.esmessage},esdate=#{Essay.esdate},espicture=#{Essay.espicture},
+         esdiffernt=#{Essay.esdiffernt},eslevel=#{Essay.eslevel},esfacepicture=#{Essay.esfacepicture}
+         </update>
+</mapper>

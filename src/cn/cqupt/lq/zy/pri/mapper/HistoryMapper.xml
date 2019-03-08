@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.cqupt.lq.zy.pri.mapper.HistoryMapper">
+
+    <insert id="addhistory" parameterType="cn.cqupt.lq.zy.pri.vo.History">
+    INSERT INTO history (hid,hpeosomething,htime)VALUES(#{History.hid},#{History.hpeosomething},#{History.htime})
+    </insert>
+
+    <select id="showHisotory" resultType="cn.cqupt.lq.zy.pri.vo.History">
+    SELECT hid,hpeosomething,htime FROM history
+    </select>
+
+</mapper>

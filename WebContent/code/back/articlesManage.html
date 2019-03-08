@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文章管理-张家口旅游政务网管理系统</title>
+    <link href="../style/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../style/backCommon.css">
+    <link rel="stylesheet" href="../style/articlesManage.css">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="slide">
+            <div id="dark">
+            </div>
+            <div id="portrait">
+                <img src="../images/logo.jpg" alt="头像">
+            </div>
+            <p>管理员</p>
+            <ul>
+                <li>
+                    <a href="./addArticles.html">
+                        <i class="iconfont">&#xe67d;</i>
+                        <p>发布文章</p>
+                    </a>
+                </li>
+                <li style="background-color: #1DB4AC;">
+                    <a href="./articlesManage.html">
+                        <i class="iconfont">&#xe65d;</i>
+                        <p>文章管理</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./linkManage.html">
+                        <i class="iconfont">&#xe68e;</i>
+                        <p>接口管理</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./diary.html">
+                        <i class="iconfont">&#xe69d;</i>
+                        <p>日志系统</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./login.html">
+                        <i class="iconfont">&#xe67f;</i>
+                        <p>退出登录</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="blank"></div>
+        <div id="main">
+            <header id="header">
+                <h2>张家口旅游政务网管理系统</h2>
+            </header><!-- /header -->
+            <div id="more">
+                <div id="headAndSearch">
+                    <h1>文章管理</h1>
+                    <div id="search">
+                        <form action="#" method="POST" accept-charset="utf-8">
+                            <button type="submit"><img src="../images/search.png" alt="搜索"></button>
+                            <input type="text" name="key" value="" placeholder="输入文章标题">
+                        </form>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>文章ID</th>
+                            <th>文章标题</th>
+                            <th>类别</th>
+                            <th>发布时间</th>
+                            <th>优先级</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>《市草原天路生态环境保护管理办法》向相关县区和部门征求意见</td>
+                            <td>旅游要闻</td>
+                            <td>2018.03.23 22:00</td>
+                            <td>2</td>
+                            <td>
+                                <button type="button">
+                                    <i class="iconfont">&#xe60a;</i>
+                                </button>
+                                <button type="button">
+                                    <i class="iconfont">&#xe67e;</i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>市旅发委召开2018年党风廉政建设工作会议</td>
+                            <td>旅游要闻</td>
+                            <td>2018.03.22 21:00</td>
+                            <td>3</td>
+                            <td>
+                                <button type="button">
+                                    <i class="iconfont">&#xe60a;</i>
+                                </button>
+                                <button type="button">
+                                    <i class="iconfont">&#xe67e;</i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>市旅发委联合市质监局、市交通局赴相关县区检查高风险旅游项目</td>
+                            <td>旅游要闻</td>
+                            <td>2018.03.21 12:30</td>
+                            <td>2</td>
+                            <td>
+                                <button type="button">
+                                    <i class="iconfont">&#xe60a;</i>
+                                </button>
+                                <button type="button">
+                                    <i class="iconfont">&#xe67e;</i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td>河北省人民政府办公厅关于2017年第四季度存在突出问题政府网站整改问责情况的通报</td>
+                            <td>通知公告</td>
+                            <td>2018.03.20 09:39</td>
+                            <td>5</td>
+                            <td>
+                                <button type="button">
+                                    <i class="iconfont">&#xe60a;</i>
+                                </button>
+                                <button type="button">
+                                    <i class="iconfont">&#xe67e;</i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="buttons">
+                    <button type="button" onclick="window.location.href='./addArticles.html'">添加</button>
+                    <nav aria-label="Page navigation">
+                      <ul class="pagination">
+                        <li>
+                          <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                          <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../script/articlesManage.js"></script>
+</html>

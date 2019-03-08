@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.cqupt.lq.zy.pri.mapper.ManageMapper">
+     <select id="selectmanage" parameterType="cn.cqupt.lq.zy.pri.vo.Manage" resultType="cn.cqupt.lq.zy.pri.vo.Manage">
+       SELECT manaid,mananame,manapassword FROM manage WHERE mananame=#{Manage.mananame} and manapassword=#{Manage.manapassword}
+       </select>
+
+
+
+</mapper>

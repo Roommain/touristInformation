@@ -1,0 +1,82 @@
+#more form {
+    width: 75vw;
+    height: auto;
+    margin: 0 auto;
+}
+#inputHead {
+    width: 75vw;
+    padding: 5px 10px;
+    height: 35px;
+    border: 1px solid #3fccdf;
+}
+#more form textarea {
+    width: 75vw;
+    padding: 5px 10px;
+    height: 200px;
+    border: 1px solid #3fccdf;
+}
+#editor {
+    width: 75vw;
+    height: 48vh;
+    margin: 0;
+    background: #fff;
+}
+#editor .w-e-text-container {
+    height: calc(48vh - 32px) !important;
+}
+#more form button {
+    width: 80px;
+    height: 30px;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 7px;
+    background: #1DB4AC;
+    color: #FFFFFF;
+}
+#more form button:hover {
+    background: #1DCAD1;
+}
+#uploadPic,
+#sortDiv,
+#setPriority {
+    width: 75vw;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 40px;
+}
+#uploadPic input,
+#priority{
+    width: calc(75vw - 100px);
+    float: right;
+    background: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    line-height: 0;
+    height: 38px;
+    border: 1px solid #3fccdf;
+}
+#sortDiv {
+    height: auto;
+}
+#priority,
+#setPriority {
+    height: 30px;
+    line-height: 30px;
+}
+#sort,
+#priority {
+    width: calc(75vw - 100px);
+    float: right;
+    font-size: 14px;
+    line-height: 30px;
+}
+#sort input {
+    margin-left: 10px;
+}
+#buttons {
+    width: 80px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 20px;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.cqupt.lq.zy.pri.mapper.InterfacenMapper">
+        <insert id="addInterfacen" parameterType="cn.cqupt.lq.zy.pri.vo.Interfacen">
+        INSERT INTO interfacen (intername,interaddress,interprir,intertime)VALUES
+        (#{Interfacen.intername},#{Interfacen.interaddress},#{Interfacen.interprir},#{Interfacen.intertime})
+        </insert>
+
+        <select id="searchInterfacen" parameterType="String" resultType="cn.cqupt.lq.zy.pri.vo.Interfacen">
+        SELECT * FROM interfacen WHERE intername LIKE CONCAT(CONCAT('%',#{intername},'%')) ORDER BY interprir DESC,intertime DESC
+        </select>
+
+       <delete id="delInterfacen" parameterType="int">
+       DELETE FROM interfacen WHERE interid=#{interid}
+       </delete>
+
+       <update id="updaInterfacen" parameterType="cn.cqupt.lq.zy.pri.vo.Interfacen">
+         UPDATE interfacen SET intername=#{Interfacen.intername},interaddress=#{Interfacen.interaddress},interprir=#{Interfacen.interprir},intertime=#{Interfacen.intertime}
+       WHERE interid=#{Interfacen.interid}
+       </update>
+       
+       <select id="showInterfacen" resultType="cn.cqupt.lq.zy.pri.vo.Interfacen">
+       SELECT interid,intername,interaddress,interprir,intertime FROM interfacen ORDER BY intertime DESC
+       </select>
+</mapper>

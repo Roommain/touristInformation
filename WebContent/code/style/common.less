@@ -1,0 +1,108 @@
+@contentWidth: 1024px;
+@hoverColor: #1db4ac;
+@detailBackColor: #fff;
+@detailHeadFontColor: #f97223;
+.size(@width, @height) {
+    width: @width;
+    height: @height;
+}
+.boxShadow() {
+    box-shadow: 5px 5px 10px rgba(207, 206, 206, 0.3);
+}
+#main {
+    .size(@contentWidth, auto);
+    margin: 0 auto;
+    zoom: 1;
+    overflow: hidden;
+}
+// 侧边栏
+@sideBarWidth: 250px;
+@sideBarHeight: 50px;
+@sideBarHeadColor: #18B2AA;
+@sideBarPaddingLeft: 50px;
+@sideBarFontColor: #000;
+@sideBarFontSize: 16px;
+#sideBar {
+    .size(@sideBarWidth, auto);
+    float: left;
+    margin-top: 100px;
+    background: @detailBackColor;
+    .boxShadow();
+    #sideBarHead {
+        .size(@sideBarWidth, @sideBarHeight);
+        background: @sideBarHeadColor;
+        color: @detailBackColor;
+        text-align: center;
+        line-height: @sideBarHeight;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    #sideBarNav {
+        .size(@sideBarWidth, auto);
+        li {
+            .size(@sideBarWidth - 5px - @sideBarPaddingLeft, @sideBarHeight);
+            padding-left: @sideBarPaddingLeft;
+            background: @detailBackColor;
+            border-left: 5px solid @detailBackColor;
+            line-height: @sideBarHeight;
+            a {
+                color: @sideBarFontColor;
+                font-size: @sideBarFontSize;
+            }
+            a:hover {
+                color: @detailHeadFontColor;
+            }
+        }
+    }
+    @followUsDis: 20px;
+    @QRCodeSize: 85px;
+    @followFontSize: 14px;
+    #followUs {
+        .size(@sideBarWidth, @followUsDis * 3 + @QRCodeSize * 2);
+        .QRCode {
+            .size(180px, @QRCodeSize);
+            margin: 0 auto;
+            padding-top: @followUsDis;
+            .codePic {
+                .size(@QRCodeSize, @QRCodeSize);
+                float: left;
+                img {
+                    .size(100%, 100%);
+                }
+            }
+            p {
+                .size(80px, @QRCodeSize);
+                float: right;
+                text-align: center;
+                font-size: @followFontSize;
+                line-height: @QRCodeSize / 2;
+            }
+        }
+    }
+}
+// 内容部分
+@sideAndCotntDis: 30px;
+@contentPaddingLeft: 20px;
+@contentPaddingTop: 20px;
+#content {
+    .size(@contentWidth - @sideBarWidth - @sideAndCotntDis - @contentPaddingLeft * 2, auto);
+    margin-top: 100px;
+    margin-bottom: 30px;
+    background: @detailBackColor;
+    .boxShadow();
+    padding: @contentPaddingTop @contentPaddingLeft;
+    border: 1px solid #F0F0F0;
+    float: right;
+    h3 {
+        font-size: 30px;
+        line-height: 70px;
+        text-align: center;
+    }
+    p {
+        .size(@contentWidth - @sideBarWidth - @sideAndCotntDis - @contentPaddingLeft * 2, auto);
+        color: #515151;
+        font-size: 16px;
+        text-indent: 2 * 16px;
+        line-height: 37px;
+    }
+}

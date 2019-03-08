@@ -1,0 +1,38 @@
+#headAndSearch {
+    width: 75vw;
+    height: 57px;
+    margin: 0 auto;
+}
+#headAndSearch h1 {
+    padding: 0;
+    float: left;
+}
+#search {
+    width: 400px;
+    height: 40px;
+    float: right;
+    margin-top: 20px;
+}
+#search form {
+    width: 400px;
+    height: 40px;
+    float: right;
+}
+#search button {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background: transparent;
+    float: right;
+}
+#search button img {
+    width: 100%;
+    height: 100%;
+}
+#search input {
+    width: 363px;
+    height: 30px;
+    border: 1px solid #1BB3AB;
+    padding: 5px;
+    float: left;
+}
